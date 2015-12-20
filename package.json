@@ -1,0 +1,15 @@
+{
+	"nativescript": {
+		"id": "org.nativescript.localnotifications",
+		"tns-android": {
+			"version": "1.5.1"
+		},
+		"tns-ios": {
+			"version": "1.5.1"
+		}
+	},
+	"dependencies": {
+		"nativescript-local-notifications": "file:../nativescript-local-notifications",
+		"tns-core-modules": "1.5.1"
+	}
+}

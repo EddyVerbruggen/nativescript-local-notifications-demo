@@ -1,0 +1,42 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
+  <TabView>
+    <TabView.items>
+      <TabViewItem title="About">
+        <TabViewItem.view>
+          <ScrollView>
+            <StackLayout cssClass="tab-content">
+              <Image margin="10" src="~/res/telerik-logo.png" />
+              <Label text="Local Notifications plugin demo" cssClass="title"/>
+              <Label text="The Local Notifications plugin.. TODO" textWrap="true"/>
+            </StackLayout>
+          </ScrollView>
+        </TabViewItem.view>
+      </TabViewItem>
+      <TabViewItem title="Demo">
+        <TabViewItem.view>
+          <GridLayout columns="*,*" rows="auto, auto, auto, auto, auto, auto, auto" horizontalAlignment="center" cssClass="tab-content">
+
+            <Label row="0" colSpan="2" text="You need permission before being able to schedule local notifications. Either defer to when you schedule it, or do it when the app firt loads." cssClass="subtitle" textWrap="true" />
+
+            <Button row="1" col="0" text="has permission?" tap="{{ doCheckHasPermission }}" />
+            <Button row="1" col="1" text="request perm." tap="{{ doRequestPermission }}" />
+              
+            <Label row="2" colSpan="2" text="After scheduling a notifications close the app and wait 10 seconds" cssClass="subtitle" textWrap="true" />
+
+            <Button row="3" col="0" text="schedule" tap="{{ doSchedule }}" />
+            <Button row="3" col="1"  text="schedule silent" tap="{{ doScheduleSilent }}"/>
+
+            <Button row="4" col="0" text="schedule /w badge" tap="{{ doScheduleAndSetBadgeNumber }}" />
+            <Button row="4" col="1"  text="TODO (repeat)" tap="{{ doScheduleSilent }}"/>
+
+            <Button row="5" col="0" text="schedule id 5" tap="{{ doScheduleId5 }}" />
+            <Button row="5" col="1"  text="cancel id 5" tap="{{ doCancelId5 }}"/>
+
+            <Button row="6" col="0"  text="get scheduled" tap="{{ doGetScheduledIds }}"/>
+            <Button row="6" col="1"  text="cancel all" tap="{{ doCancelAll }}"/>
+          </GridLayout>
+        </TabViewItem.view>
+      </TabViewItem>
+    </TabView.items>
+  </TabView>
+</Page>
