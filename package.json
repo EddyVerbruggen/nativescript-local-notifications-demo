@@ -1,10 +1,10 @@
 {
 	"nativescript": {
 		"id": "org.nativescript.localnotifications",
-		"tns-android": {
-			"version": "1.5.1"
-		},
 		"tns-ios": {
+			"version": "1.5.2"
+		},
+		"tns-android": {
 			"version": "1.5.1"
 		}
 	},

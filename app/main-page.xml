@@ -14,7 +14,7 @@
       </TabViewItem>
       <TabViewItem title="Demo">
         <TabViewItem.view>
-          <GridLayout columns="*,*" rows="auto, auto, auto, auto, auto, auto, auto" horizontalAlignment="center" cssClass="tab-content">
+          <GridLayout columns="*,*" rows="auto, auto, auto, auto, auto, auto, auto, auto" horizontalAlignment="center" cssClass="tab-content">
 
             <Label row="0" colSpan="2" text="You need permission before being able to schedule local notifications. Either defer to when you schedule it, or do it when the app firt loads." cssClass="subtitle" textWrap="true" />
 
@@ -34,6 +34,9 @@
 
             <Button row="6" col="0"  text="get scheduled" tap="{{ doGetScheduledIds }}"/>
             <Button row="6" col="1"  text="cancel all" tap="{{ doCancelAll }}"/>
+
+            <Button row="7" col="0"  text="register" tap="{{ doRegister }}"/>
+            <Button row="7" col="1"  text="add callback" tap="{{ doAddOnMessageReceivedCallback }}"/>
           </GridLayout>
         </TabViewItem.view>
       </TabViewItem>

@@ -7,6 +7,50 @@ var DemoAppModel = (function (_super) {
     _super.call(this);
   }
 
+  /*
+  var self = this;
+  console.log("----- registering");
+  LocalNotifications.register({ senderID: '<ENTER_YOUR_PROJECT_NUMBER>' }, function (data){
+    console.log("----- registering done");
+    self.set("message", "" + JSON.stringify(data));
+  }, function() { });
+
+  LocalNotifications.onMessageReceived(function callback(data) {
+    console.log("----- message received");
+    self.set("message", "" + JSON.stringify(data));
+  });
+
+  DemoAppModel.prototype.doRegister = function () {
+    LocalNotifications.register().then(
+        function(granted) {
+          console.log("---- register done");
+        }
+    )
+  };
+  */
+
+  DemoAppModel.prototype.doAddOnMessageReceivedCallback = function () {
+    LocalNotifications.addOnMessageReceivedCallback(
+        function (notificationData) {
+          console.log("------------- notification received: " + notificationData);
+          var notification = JSON.parse(notificationData);
+          console.log("------------- notification id received: " + notification.id);
+        }
+    ).then(
+        function() {
+          console.log("---- MessageReceivedCallback has been added");
+        }
+    )
+  };
+
+  // TODO get rid of this in favour of the one above
+  DemoAppModel.prototype.doCheckPendingNotification = function () {
+    LocalNotifications.checkPendingNotification().then(
+        function() {
+          console.log("---- checkPendingNotification done");
+        }
+    )
+  };
 
   DemoAppModel.prototype.doCheckHasPermission = function () {
     LocalNotifications.hasPermission().then(
@@ -21,7 +65,11 @@ var DemoAppModel = (function (_super) {
   };
 
   DemoAppModel.prototype.doRequestPermission = function () {
-    LocalNotifications.requestPermission().then(
+    LocalNotifications.requestPermission({
+        badge: true, // Enable setting badge through Push Notification
+        sound: true, // Enable playing a sound
+        alert: true  // Enable creating a alert
+    }).then(
         function() {
           console.log("Permission requested");
         }
@@ -31,9 +79,9 @@ var DemoAppModel = (function (_super) {
   DemoAppModel.prototype.doSchedule = function () {
     LocalNotifications.schedule([{
       id: 1,
-      title: 'Hi',
-      body: 'Lo',
-      at: new Date(new Date().getTime() + (10*1000))
+      title: 'The title',
+      body: 'The body',
+      at: new Date(new Date().getTime() + (5*1000))
     }]).then(
         function() {
           console.log("Notification scheduled - close the app and within 10 seconds from now you'll see (and hear) it.");
@@ -67,13 +115,13 @@ var DemoAppModel = (function (_super) {
       title: 'Hi',
       body: 'Lo',
       at: new Date(new Date().getTime() + 10*1000),
-      badgeNumber: 3
+      badge: 3
     }]).then(
         function() {
           console.log("Silent notification scheduled - close the app and within 10 seconds from now you'll see but won't hear it.");
         },
         function(error) {
-          console.log("doScheduleSilent error: " + error);
+          console.log("doScheduleAndSetBadgeNumber error: " + error);
         }
     )
   };
