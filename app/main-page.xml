@@ -32,7 +32,7 @@
             <Button row="5" col="0" text="schedule id 5" tap="{{ doScheduleId5 }}" />
             <Button row="5" col="1"  text="cancel id 5" tap="{{ doCancelId5 }}"/>
 
-            <Button row="6" col="0"  text="get scheduled" tap="{{ doGetScheduledIds }}"/>
+            <Button row="6" col="0"  text="get scheduled id's" tap="{{ doGetScheduledIds }}"/>
             <Button row="6" col="1"  text="cancel all" tap="{{ doCancelAll }}"/>
 
             <Button row="7" col="0"  text="register" tap="{{ doRegister }}"/>

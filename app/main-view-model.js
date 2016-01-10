@@ -81,13 +81,18 @@ var DemoAppModel = (function (_super) {
       id: 1,
       title: 'The title',
       body: 'The body',
-      at: new Date(new Date().getTime() + (5*1000))
+      ticker: 'Special ticker text (Android only)',
+      at: new Date(new Date().getTime() + (100*1000))
     }]).then(
         function() {
-          console.log("Notification scheduled - close the app and within 10 seconds from now you'll see (and hear) it.");
+          dialogs.alert({
+            title: "Notification scheduled",
+            message: 'ID: 1',
+            okButtonText: "OK, thanks"
+          });
         },
         function(error) {
-          console.log("doScheduleSilent error: " + error);
+          console.log("doSchedule error: " + error);
         }
     )
   };
@@ -96,12 +101,16 @@ var DemoAppModel = (function (_super) {
     LocalNotifications.schedule([{
       id: 2,
       title: 'Hi',
-      body: 'Lo',
-      sound: null,
-      at: new Date(new Date().getTime() + 10*1000)
+      body: 'I\'m soundless',
+      //sound: null,
+      at: new Date(new Date().getTime() + 140*1000)
     }]).then(
         function() {
-          console.log("Silent notification scheduled - close the app and within 10 seconds from now you'll see but won't hear it.");
+          dialogs.alert({
+            title: "Notification scheduled",
+            message: 'ID: 2',
+            okButtonText: "OK, thanks"
+          });
         },
         function(error) {
           console.log("doScheduleSilent error: " + error);
@@ -113,12 +122,16 @@ var DemoAppModel = (function (_super) {
     LocalNotifications.schedule([{
       id: 3,
       title: 'Hi',
-      body: 'Lo',
-      at: new Date(new Date().getTime() + 10*1000),
+      body: 'You should see a \'3\' somewhere',
+      at: new Date(new Date().getTime() + 20*1000),
       badge: 3
     }]).then(
         function() {
-          console.log("Silent notification scheduled - close the app and within 10 seconds from now you'll see but won't hear it.");
+          dialogs.alert({
+            title: "Notification scheduled",
+            message: 'ID: 3',
+            okButtonText: "OK, thanks"
+          });
         },
         function(error) {
           console.log("doScheduleAndSetBadgeNumber error: " + error);
@@ -126,16 +139,19 @@ var DemoAppModel = (function (_super) {
     )
   };
 
-
   DemoAppModel.prototype.doScheduleId5 = function () {
     LocalNotifications.schedule([{
       id: 5,
       title: 'Hey',
       body: 'I\'m ID 5',
-      at: new Date(new Date().getTime() + 10*1000)
+      at: new Date(new Date().getTime() + 80*1000)
     }]).then(
         function() {
-          console.log("Notification with ID 5 scheduled - close the app and within 10 seconds from now you'll see but won't hear it.");
+          dialogs.alert({
+            title: "Notification scheduled",
+            message: 'ID: 5',
+            okButtonText: "OK, thanks"
+          });
         },
         function(error) {
           console.log("doScheduleId5 error: " + error);
@@ -149,7 +165,7 @@ var DemoAppModel = (function (_super) {
           dialogs.alert({
             title: "Scheduled ID's",
             message: 'ID\'s: ' + ids, 
-            okButtonText: "OK, thanks"
+            okButtonText: "Sweet!"
           })
         },
         function(error) {
@@ -163,7 +179,7 @@ var DemoAppModel = (function (_super) {
         function() {
           dialogs.alert({
             title: "All canceled",
-            okButtonText: "OK, awesome"
+            okButtonText: "Awesome!"
           })
         },
         function(error) {
