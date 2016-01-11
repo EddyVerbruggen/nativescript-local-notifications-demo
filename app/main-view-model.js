@@ -102,7 +102,7 @@ var DemoAppModel = (function (_super) {
       id: 2,
       title: 'Hi',
       body: 'I\'m soundless',
-      //sound: null,
+      sound: null,
       at: new Date(new Date().getTime() + 140*1000)
     }]).then(
         function() {
