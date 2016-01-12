@@ -33,8 +33,9 @@ var DemoAppModel = (function (_super) {
     LocalNotifications.addOnMessageReceivedCallback(
         function (notificationData) {
           console.log("------------- notification received: " + notificationData);
-          var notification = JSON.parse(notificationData);
-          console.log("------------- notification id received: " + notification.id);
+          console.log("------------- notification received id: " + notificationData.id);
+          //var notification = JSON.parse(notificationData);
+          //console.log("------------- notification id received: " + notification.id);
         }
     ).then(
         function() {
@@ -82,7 +83,7 @@ var DemoAppModel = (function (_super) {
       title: 'The title',
       body: 'The body',
       ticker: 'Special ticker text (Android only)',
-      at: new Date(new Date().getTime() + (100*1000))
+      at: new Date(new Date().getTime() + (5*1000))
     }]).then(
         function() {
           dialogs.alert({
@@ -103,7 +104,7 @@ var DemoAppModel = (function (_super) {
       title: 'Hi',
       body: 'I\'m soundless',
       sound: null,
-      at: new Date(new Date().getTime() + 140*1000)
+      at: new Date(new Date().getTime() + 10*1000)
     }]).then(
         function() {
           dialogs.alert({

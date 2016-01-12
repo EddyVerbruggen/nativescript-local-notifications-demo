@@ -35,8 +35,7 @@
             <Button row="6" col="0"  text="get scheduled id's" tap="{{ doGetScheduledIds }}"/>
             <Button row="6" col="1"  text="cancel all" tap="{{ doCancelAll }}"/>
 
-            <Button row="7" col="0"  text="register" tap="{{ doRegister }}"/>
-            <Button row="7" col="1"  text="add callback" tap="{{ doAddOnMessageReceivedCallback }}"/>
+            <Button row="7" col="0" colSpan="2" text="add 'message tapped' callback" tap="{{ doAddOnMessageReceivedCallback }}"/>
           </GridLayout>
         </TabViewItem.view>
       </TabViewItem>
