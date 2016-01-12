@@ -14,30 +14,32 @@
       </TabViewItem>
       <TabViewItem title="Demo">
         <TabViewItem.view>
-          <GridLayout columns="*,*" rows="auto, auto, auto, auto, auto, auto, auto, auto, auto" horizontalAlignment="center" cssClass="tab-content">
+          <ScrollView>
+            <GridLayout columns="*,*" rows="auto, auto, auto, auto, auto, auto, auto, auto, auto" horizontalAlignment="center" cssClass="tab-content">
 
-            <Label row="0" colSpan="2" text="You need permission before being able to schedule local notifications. Either defer to when you schedule it, or do it when the app first loads." cssClass="hint" textWrap="true" />
+              <Label row="0" colSpan="2" text="On iOS you need permission before being able to schedule local notifications. Either defer to when you schedule it, or do it when the app first loads." cssClass="hint" textWrap="true" />
 
-            <Button row="1" col="0" text="has permission?" tap="{{ doCheckHasPermission }}" cssClass="button-neutral"/>
-            <Button row="1" col="1" text="request perm." tap="{{ doRequestPermission }}" cssClass="button-neutral"/>
-              
-            <Label row="2" colSpan="2" text="After scheduling a notifications close the app and wait 10 seconds" cssClass="hint" textWrap="true" />
+              <Button row="1" col="0" text="has permission?" tap="{{ doCheckHasPermission }}" cssClass="button-neutral"/>
+              <Button row="1" col="1" text="request perm." tap="{{ doRequestPermission }}" cssClass="button-neutral"/>
 
-            <Button row="3" col="0" text="schedule" tap="{{ doSchedule }}" />
-            <Button row="3" col="1"  text="schedule silent" tap="{{ doScheduleSilent }}"/>
+              <Label row="2" colSpan="2" text="After scheduling a notifications close the app and wait 10 seconds" cssClass="hint" textWrap="true" />
 
-            <Button row="4" col="0" text="schedule /w badge" tap="{{ doScheduleAndSetBadgeNumber }}" />
-            <Button row="4" col="1" text="schedule id 5" tap="{{ doScheduleId5 }}" />
+              <Button row="3" col="0" text="schedule" tap="{{ doSchedule }}" />
+              <Button row="3" col="1"  text="schedule silent" tap="{{ doScheduleSilent }}"/>
 
-            <Button row="5" col="0" colSpan="2" text="get scheduled id's" tap="{{ doGetScheduledIds }}" cssClass="button-neutral"/>
+              <Button row="4" col="0" text="schedule /w badge" tap="{{ doScheduleAndSetBadgeNumber }}" />
+              <Button row="4" col="1" text="schedule id 5" tap="{{ doScheduleId5 }}" />
 
-            <Button row="6" col="0"  text="cancel all" tap="{{ doCancelAll }}" cssClass="button-danger"/>
-            <Button row="6" col="1"  text="cancel id 5" tap="{{ doCancelId5 }}" cssClass="button-danger"/>
+              <Button row="5" col="0" colSpan="2" text="get scheduled id's" tap="{{ doGetScheduledIds }}" cssClass="button-neutral"/>
 
-            <Label row="7" colSpan="2" text="To receive the notification payload in your app you need to configure a listener." cssClass="hint" textWrap="true" />
+              <Button row="6" col="0"  text="cancel all" tap="{{ doCancelAll }}" cssClass="button-danger"/>
+              <Button row="6" col="1"  text="cancel id 5" tap="{{ doCancelId5 }}" cssClass="button-danger"/>
 
-            <Button row="8" col="0" colSpan="2" text="add notification listener" tap="{{ doAddOnMessageReceivedCallback }}" cssClass="button-positive"/>
-          </GridLayout>
+              <Label row="7" colSpan="2" text="To receive the notification payload in your app you need to configure a listener." cssClass="hint" textWrap="true" />
+
+              <Button row="8" col="0" colSpan="2" text="add notification listener" tap="{{ doAddOnMessageReceivedCallback }}" cssClass="button-positive"/>
+            </GridLayout>
+          </ScrollView>
         </TabViewItem.view>
       </TabViewItem>
     </TabView.items>
