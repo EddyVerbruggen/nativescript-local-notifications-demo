@@ -7,48 +7,24 @@ var DemoAppModel = (function (_super) {
     _super.call(this);
   }
 
-  /*
-  var self = this;
-  console.log("----- registering");
-  LocalNotifications.register({ senderID: '<ENTER_YOUR_PROJECT_NUMBER>' }, function (data){
-    console.log("----- registering done");
-    self.set("message", "" + JSON.stringify(data));
-  }, function() { });
-
-  LocalNotifications.onMessageReceived(function callback(data) {
-    console.log("----- message received");
-    self.set("message", "" + JSON.stringify(data));
-  });
-
-  DemoAppModel.prototype.doRegister = function () {
-    LocalNotifications.register().then(
-        function(granted) {
-          console.log("---- register done");
-        }
-    )
-  };
-  */
-
   DemoAppModel.prototype.doAddOnMessageReceivedCallback = function () {
     LocalNotifications.addOnMessageReceivedCallback(
         function (notificationData) {
-          console.log("------------- notification received: " + notificationData);
-          console.log("------------- notification received id: " + notificationData.id);
-          //var notification = JSON.parse(notificationData);
-          //console.log("------------- notification id received: " + notification.id);
+          dialogs.alert({
+            title: "Notification received",
+            message: "ID: " + notificationData.id +
+                "\nTitle: " + notificationData.title +
+                 "\nBody: " + notificationData.body,
+            okButtonText: "Excellent!"
+          })
         }
     ).then(
         function() {
-          console.log("---- MessageReceivedCallback has been added");
-        }
-    )
-  };
-
-  // TODO get rid of this in favour of the one above
-  DemoAppModel.prototype.doCheckPendingNotification = function () {
-    LocalNotifications.checkPendingNotification().then(
-        function() {
-          console.log("---- checkPendingNotification done");
+          dialogs.alert({
+            title: "Listener added",
+            message: "We'll let you know when a notification is received.",
+            okButtonText: "Nice :)"
+          })
         }
     )
   };
@@ -66,13 +42,13 @@ var DemoAppModel = (function (_super) {
   };
 
   DemoAppModel.prototype.doRequestPermission = function () {
-    LocalNotifications.requestPermission({
-        badge: true, // Enable setting badge through Push Notification
-        sound: true, // Enable playing a sound
-        alert: true  // Enable creating a alert
-    }).then(
-        function() {
-          console.log("Permission requested");
+    LocalNotifications.requestPermission().then(
+        function(granted) {
+          dialogs.alert({
+            title: "Permission granted?",
+            message: granted ? "YES" : "NO",
+            okButtonText: "OK"
+          })
         }
     )
   };
