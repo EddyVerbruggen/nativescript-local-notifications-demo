@@ -59,7 +59,7 @@ var DemoAppModel = (function (_super) {
       title: 'The title',
       body: 'The body',
       ticker: 'Special ticker text (Android only)',
-      at: new Date(new Date().getTime() + (5*1000))
+      at: new Date(new Date().getTime() + (10*1000))
     }]).then(
         function() {
           dialogs.alert({
@@ -100,7 +100,7 @@ var DemoAppModel = (function (_super) {
       id: 3,
       title: 'Hi',
       body: 'You should see a \'3\' somewhere',
-      at: new Date(new Date().getTime() + 20*1000),
+      at: new Date(new Date().getTime() + 10*1000),
       badge: 3
     }]).then(
         function() {
@@ -121,7 +121,7 @@ var DemoAppModel = (function (_super) {
       id: 5,
       title: 'Hey',
       body: 'I\'m ID 5',
-      at: new Date(new Date().getTime() + 80*1000)
+      at: new Date(new Date().getTime() + 10*1000)
     }]).then(
         function() {
           dialogs.alert({
