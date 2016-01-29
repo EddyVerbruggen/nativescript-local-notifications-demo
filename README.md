@@ -1,6 +1,6 @@
 # nativescript-local-notifications demo app
 
-Demo app for the {N} [local notifications plugin](https://www.npmjs.com/package/nativescript-local-notifications)
+Demo app for the {N} [local notifications plugin](https://www.npmjs.com/package/nativescript-local-notifications). SuperEasy(TM) to install!
 
 ## Installation
 
