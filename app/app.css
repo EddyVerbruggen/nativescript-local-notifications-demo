@@ -25,11 +25,14 @@ label {
 
 button {
   background-color: #E0A458;
-  color: #ffffff;
   padding: 8;
   margin: 8;
   font-size: 14;
   border-radius: 4;
+}
+
+.button {
+  color: #FFFFFF;
 }
 
 .button-positive {
