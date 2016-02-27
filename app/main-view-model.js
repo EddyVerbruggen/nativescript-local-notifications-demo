@@ -16,7 +16,7 @@ var DemoAppModel = (function (_super) {
                 "\nTitle: " + notificationData.title +
                  "\nBody: " + notificationData.body,
             okButtonText: "Excellent!"
-          })
+          });
         }
     ).then(
         function() {
@@ -24,9 +24,9 @@ var DemoAppModel = (function (_super) {
             title: "Listener added",
             message: "We'll let you know when a notification is received.",
             okButtonText: "Nice :)"
-          })
+          });
         }
-    )
+    );
   };
 
   DemoAppModel.prototype.doCheckHasPermission = function () {
@@ -36,9 +36,9 @@ var DemoAppModel = (function (_super) {
             title: "Permission granted?",
             message: granted ? "YES" : "NO",
             okButtonText: "OK"
-          })
+          });
         }
-    )
+    );
   };
 
   DemoAppModel.prototype.doRequestPermission = function () {
@@ -48,9 +48,9 @@ var DemoAppModel = (function (_super) {
             title: "Permission granted?",
             message: granted ? "YES" : "NO",
             okButtonText: "OK"
-          })
+          });
         }
-    )
+    );
   };
 
   DemoAppModel.prototype.doSchedule = function () {
@@ -71,7 +71,7 @@ var DemoAppModel = (function (_super) {
         function(error) {
           console.log("doSchedule error: " + error);
         }
-    )
+    );
   };
 
   DemoAppModel.prototype.doScheduleSilent = function () {
@@ -92,7 +92,7 @@ var DemoAppModel = (function (_super) {
         function(error) {
           console.log("doScheduleSilent error: " + error);
         }
-    )
+    );
   };
 
   DemoAppModel.prototype.doScheduleAndSetBadgeNumber = function () {
@@ -113,7 +113,7 @@ var DemoAppModel = (function (_super) {
         function(error) {
           console.log("doScheduleAndSetBadgeNumber error: " + error);
         }
-    )
+    );
   };
 
   DemoAppModel.prototype.doScheduleId5 = function () {
@@ -133,7 +133,7 @@ var DemoAppModel = (function (_super) {
         function(error) {
           console.log("doScheduleId5 error: " + error);
         }
-    )
+    );
   };
 
   DemoAppModel.prototype.doGetScheduledIds = function () {
@@ -143,12 +143,12 @@ var DemoAppModel = (function (_super) {
             title: "Scheduled ID's",
             message: 'ID\'s: ' + ids, 
             okButtonText: "Sweet!"
-          })
+          });
         },
         function(error) {
           console.log("doGetScheduledIds error: " + error);
         }
-    )
+    );
   };
 
   DemoAppModel.prototype.doCancelAll = function (sze) {
@@ -157,12 +157,12 @@ var DemoAppModel = (function (_super) {
           dialogs.alert({
             title: "All canceled",
             okButtonText: "Awesome!"
-          })
+          });
         },
         function(error) {
           console.log("doCancelAll error: " + error);
         }
-    )
+    );
   };
 
   DemoAppModel.prototype.doCancelId5 = function (sze) {
@@ -172,18 +172,18 @@ var DemoAppModel = (function (_super) {
                 dialogs.alert({
                     title: "ID 5 canceled",
                     okButtonText: "OK, coolness"
-                })
+                });
             } else {
                 dialogs.alert({
                     title: "No ID 5 was scheduled",
                     okButtonText: "OK, woops"
-                })
+                });
             }
         },
         function(error) {
           console.log("doCancelId5 error: " + error);
         }
-    )
+    );
   };
 
   return DemoAppModel;

@@ -9,7 +9,7 @@
 		}
 	},
 	"dependencies": {
-		"nativescript-local-notifications": "1.0.0",
+		"nativescript-local-notifications": "1.0.1",
 		"tns-core-modules": "1.6.0"
 	}
 }
