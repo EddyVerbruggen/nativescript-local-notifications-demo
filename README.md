@@ -7,7 +7,8 @@ Demo app for the {N} [local notifications plugin](https://www.npmjs.com/package/
 This app is built with the [NativeScript CLI](https://github.com/NativeScript/nativescript-cli).
 Once you have the [CLI installed](https://github.com/NativeScript/nativescript-cli#installation), start by cloning the repo:
 
-__ make sure your project folder name is not too long - this one is ok:__
+__make sure your project folder name is not too long - this one is ok:__
+
 ```
 $ git clone https://github.com/EddyVerbruggen/nativescript-local-notifications ns-localnotifications
 $ cd ns-localnotifications
