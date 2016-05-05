@@ -11,7 +11,7 @@ __make sure your project folder name is not too long - this one is ok:__
 
 ```
 $ git clone https://github.com/EddyVerbruggen/nativescript-local-notifications ns-localnotifications
-$ cd ns-localnotifications
+$ cd ns-localnotifications/LocalNotifications
 ```
 
 Next, install the app's iOS and Android runtimes, as well as the app's npm dependencies:

@@ -1,4 +1,7 @@
-.idea
-platforms
-node_modules
-lib
+*/bin
+*/obj
+*.user-settings.xml
+LocalNotifications/node_modules
+LocalNotifications/platforms
+LocalNotifications/lib
+LocalNotifications/bin
