@@ -64,7 +64,7 @@ var DemoAppModel = (function (_super) {
         function() {
           dialogs.alert({
             title: "Notification scheduled",
-            message: 'ID: 1',
+            message: "ID: 1",
             okButtonText: "OK, thanks"
           });
         },
