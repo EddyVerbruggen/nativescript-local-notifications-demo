@@ -10,7 +10,7 @@ Once you have the [CLI installed](https://github.com/NativeScript/nativescript-c
 __make sure your project folder name is not too long - this one is ok:__
 
 ```
-$ git clone https://github.com/EddyVerbruggen/nativescript-local-notifications ns-localnotifications
+$ git clone https://github.com/EddyVerbruggen/nativescript-local-notifications-demo ns-localnotifications
 $ cd ns-localnotifications/LocalNotifications
 ```
 
