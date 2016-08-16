@@ -5,11 +5,11 @@
 			"version": "2.0.0"
 		},
 		"tns-android": {
-			"version": "2.0.0"
+			"version": "2.1.1"
 		}
 	},
 	"dependencies": {
-		"nativescript-local-notifications": "1.0.3",
+		"nativescript-local-notifications": "1.1.0",
 		"tns-core-modules": "^1.7.0"
 	},
 	"devDependencies": {
