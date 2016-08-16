@@ -152,7 +152,7 @@ var DemoAppModel = (function (_super) {
           });
         },
         function(error) {
-          console.log("doScheduleId5 error: " + error);
+          console.log("doScheduleEveryMinute error: " + error);
         }
     );
   };
@@ -186,17 +186,17 @@ var DemoAppModel = (function (_super) {
     );
   };
 
-  DemoAppModel.prototype.doCancelId5 = function (sze) {
-    LocalNotifications.cancel(5).then(
+  DemoAppModel.prototype.doCancelId6 = function (sze) {
+    LocalNotifications.cancel(6).then(
         function(foundAndCanceled) {
             if (foundAndCanceled) {
                 dialogs.alert({
-                    title: "ID 5 canceled",
+                    title: "ID 6 canceled",
                     okButtonText: "OK, coolness"
                 });
             } else {
                 dialogs.alert({
-                    title: "No ID 5 was scheduled",
+                    title: "No ID 6 was scheduled",
                     okButtonText: "OK, woops"
                 });
             }
