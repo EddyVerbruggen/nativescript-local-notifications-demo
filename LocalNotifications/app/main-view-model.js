@@ -160,6 +160,7 @@ var DemoAppModel = (function (_super) {
   DemoAppModel.prototype.doGetScheduledIds = function () {
     LocalNotifications.getScheduledIds().then(
         function(ids) {
+          console.log("-------------------- Scheduled ID's: " + ids);
           dialogs.alert({
             title: "Scheduled ID's",
             message: 'ID\'s: ' + ids, 
