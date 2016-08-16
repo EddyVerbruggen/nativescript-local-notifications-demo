@@ -136,6 +136,27 @@ var DemoAppModel = (function (_super) {
     );
   };
 
+  DemoAppModel.prototype.doScheduleEveryMinute = function () {
+    LocalNotifications.schedule([{
+      id: 6,
+      title: 'Every minute!',
+      interval: 'minute', // some constant
+      body: 'I\'m repeating until cancelled',
+      at: new Date(new Date().getTime() + 10*1000)
+    }]).then(
+        function() {
+          dialogs.alert({
+            title: "Notification scheduled",
+            message: 'ID: 6, repeating',
+            okButtonText: "OK, thanks"
+          });
+        },
+        function(error) {
+          console.log("doScheduleId5 error: " + error);
+        }
+    );
+  };
+
   DemoAppModel.prototype.doGetScheduledIds = function () {
     LocalNotifications.getScheduledIds().then(
         function(ids) {

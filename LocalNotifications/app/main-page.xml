@@ -30,14 +30,16 @@
               <Button row="4" col="0" text="schedule /w badge" tap="{{ doScheduleAndSetBadgeNumber }}" cssClass="button"  />
               <Button row="4" col="1" text="schedule id 5" tap="{{ doScheduleId5 }}" cssClass="button"  />
 
-              <Button row="5" col="0" colSpan="2" text="get scheduled id's" tap="{{ doGetScheduledIds }}" cssClass="button button-neutral"/>
+              <Button row="5" colSpan="2" text="repeat every minute" tap="{{ doScheduleEveryMinute }}" cssClass="button"  />
 
-              <Button row="6" col="0"  text="cancel all" tap="{{ doCancelAll }}" cssClass="button button-danger"/>
-              <Button row="6" col="1"  text="cancel id 5" tap="{{ doCancelId5 }}" cssClass="button button-danger"/>
+              <Button row="6" col="0" colSpan="2" text="get scheduled id's" tap="{{ doGetScheduledIds }}" cssClass="button button-neutral"/>
 
-              <Label row="7" colSpan="2" text="To receive the notification payload in your app you need to configure a listener." cssClass="hint" textWrap="true" />
+              <Button row="7" col="0"  text="cancel all" tap="{{ doCancelAll }}" cssClass="button button-danger"/>
+              <Button row="7" col="1"  text="cancel id 5" tap="{{ doCancelId5 }}" cssClass="button button-danger"/>
 
-              <Button row="8" col="0" colSpan="2" text="add notification listener" tap="{{ doAddOnMessageReceivedCallback }}" cssClass="button button-positive"/>
+              <Label row="8" colSpan="2" text="To receive the notification payload in your app you need to configure a listener." cssClass="hint" textWrap="true" />
+
+              <Button row="9" col="0" colSpan="2" text="add notification listener" tap="{{ doAddOnMessageReceivedCallback }}" cssClass="button button-positive"/>
             </GridLayout>
           </ScrollView>
         </TabViewItem.view>
