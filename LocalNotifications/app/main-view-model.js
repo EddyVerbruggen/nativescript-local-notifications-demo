@@ -116,11 +116,12 @@ var DemoAppModel = (function (_super) {
     );
   };
 
-  DemoAppModel.prototype.doScheduleId5 = function () {
+  DemoAppModel.prototype.doScheduleId5WithCustomIcon = function () {
     LocalNotifications.schedule([{
       id: 5,
       title: 'Hey',
       body: 'I\'m ID 5',
+      smallIcon: 'res://launcher_icon_arrow',
       at: new Date(new Date().getTime() + 10*1000)
     }]).then(
         function() {

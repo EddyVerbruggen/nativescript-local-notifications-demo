@@ -28,7 +28,7 @@
               <Button row="3" col="1"  text="schedule silent" tap="{{ doScheduleSilent }}" cssClass="button" />
 
               <Button row="4" col="0" text="schedule /w badge" tap="{{ doScheduleAndSetBadgeNumber }}" cssClass="button"  />
-              <Button row="4" col="1" text="schedule id 5" tap="{{ doScheduleId5 }}" cssClass="button"  />
+              <Button row="4" col="1" text="schedule id 5 /w icon" tap="{{ doScheduleId5WithCustomIcon }}" cssClass="button"  />
 
               <Button row="5" colSpan="2" text="repeat every minute" tap="{{ doScheduleEveryMinute }}" cssClass="button"  />
 
