@@ -1,16 +1,16 @@
 {
   "nativescript": {
     "id": "org.nativescript.localnotifications",
-    "tns-android": {
-      "version": "2.3.0"
-    },
     "tns-ios": {
-      "version": "2.3.0"
+      "version": "2.4.0"
+    },
+    "tns-android": {
+      "version": "2.4.0"
     }
   },
   "dependencies": {
-    "nativescript-local-notifications": "^1.0.0",
-    "tns-core-modules": "^2.3.0"
+    "nativescript-local-notifications": "^1.2.0",
+    "tns-core-modules": "^2.4.0"
   },
   "devDependencies": {
     "babel-traverse": "6.8.0",

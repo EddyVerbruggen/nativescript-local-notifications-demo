@@ -122,6 +122,7 @@ var DemoAppModel = (function (_super) {
       title: 'Hey',
       body: 'I\'m ID 5',
       smallIcon: 'res://launcher_icon_arrow',
+      largeIcon: 'res://ic_notify', // although this is the default fallback as well ;)
       at: new Date(new Date().getTime() + 10*1000)
     }]).then(
         function() {
@@ -161,7 +162,6 @@ var DemoAppModel = (function (_super) {
   DemoAppModel.prototype.doGetScheduledIds = function () {
     LocalNotifications.getScheduledIds().then(
         function(ids) {
-          console.log("-------------------- Scheduled ID's: " + ids);
           dialogs.alert({
             title: "Scheduled ID's",
             message: 'ID\'s: ' + ids, 

@@ -17,10 +17,11 @@
           <ScrollView>
             <GridLayout columns="*,*" rows="auto, auto, auto, auto, auto, auto, auto, auto, auto" horizontalAlignment="center" cssClass="tab-content">
 
-              <Label row="0" colSpan="2" text="On iOS you need permission before being able to schedule local notifications. Either defer to when you schedule it, or do it when the app first loads." cssClass="hint" textWrap="true" />
-
-              <Button row="1" col="0" text="has permission?" tap="{{ doCheckHasPermission }}" cssClass="button button-neutral"/>
-              <Button row="1" col="1" text="request perm." tap="{{ doRequestPermission }}" cssClass="button button-neutral"/>
+              <iOS>
+                <Label row="0" colSpan="2" text="On iOS you need permission before being able to schedule local notifications. Either defer to when you schedule it, or do it when the app first loads." cssClass="hint" textWrap="true" />
+                <Button row="1" col="0" text="has permission?" tap="{{ doCheckHasPermission }}" cssClass="button button-neutral"/>
+                <Button row="1" col="1" text="request perm." tap="{{ doRequestPermission }}" cssClass="button button-neutral"/>
+              </iOS>
 
               <Label row="2" colSpan="2" text="After scheduling a notifications close the app and wait 10 seconds" cssClass="hint" textWrap="true" />
 
