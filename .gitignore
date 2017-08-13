@@ -1,6 +1,4 @@
 .idea/
 .vscode/
 node_modules/
-LocalNotifications/platforms
-LocalNotifications/lib
-LocalNotifications/bin
+LocalNotifications/platforms/
