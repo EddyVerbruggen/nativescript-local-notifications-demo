@@ -1,7 +1,6 @@
-*/bin
-*/obj
-*.user-settings.xml
-LocalNotifications/node_modules
+.idea/
+.vscode/
+node_modules/
 LocalNotifications/platforms
 LocalNotifications/lib
 LocalNotifications/bin
