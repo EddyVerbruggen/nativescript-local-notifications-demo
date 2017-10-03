@@ -23,7 +23,7 @@
                 <Button row="1" col="1" text="request perm." tap="{{ doRequestPermission }}" class="button button-neutral"/>
               </iOS>
 
-              <Label row="2" colSpan="2" text="After scheduling a notifications close the app and wait 10 seconds" class="hint" textWrap="true" />
+              <Label row="2" colSpan="2" text="After scheduling a notification close the app and wait 10 seconds" class="hint" textWrap="true" />
 
               <Button row="3" col="0" text="schedule" tap="{{ doSchedule }}" class="button" />
               <Button row="3" col="1"  text="schedule silent" tap="{{ doScheduleSilent }}" class="button" />

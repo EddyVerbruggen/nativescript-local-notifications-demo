@@ -58,7 +58,9 @@ var DemoAppModel = (function (_super) {
     LocalNotifications.schedule([{
       id: 1,
       title: 'The title',
-      body: 'The body',
+      body: 'The big body. The big body. The big body. The big body. The big body. The big body. The big body. The big body.',
+      bigTextStyle: true, // Adds an 'expansion arrow' to the notification (Android only)
+      sound: "customsound",
       ticker: 'Special ticker text (Android only)',
       at: new Date(new Date().getTime() + (10*1000))
     }]).then(
