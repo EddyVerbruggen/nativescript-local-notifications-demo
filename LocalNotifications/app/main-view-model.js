@@ -207,7 +207,7 @@ var DemoAppModel = (function (_super) {
             }
         },
         function(error) {
-          console.log("doCancelId5 error: " + error);
+          console.log("doCancelId6 error: " + error);
         }
     );
   };
