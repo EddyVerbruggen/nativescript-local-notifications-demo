@@ -1,16 +1,13 @@
 {
   "nativescript": {
     "id": "org.nativescript.plugindemo.localnotifications",
-    "tns-android": {
-      "version": "3.4.1"
-    },
     "tns-ios": {
-      "version": "3.4.1"
+      "version": "4.0.1"
     }
   },
   "dependencies": {
     "nativescript-local-notifications": "2.0.3",
-    "tns-core-modules": "~3.4.0"
+    "tns-core-modules": "4.0.1"
   },
   "devDependencies": {
     "babel-traverse": "6.12.0",
@@ -18,8 +15,8 @@
     "babylon": "6.8.4",
     "filewalker": "0.1.2",
     "lazy": "1.0.11",
-    "nativescript-dev-typescript": "^0.6.0",
-    "tns-platform-declarations": "~3.4.0",
-    "typescript": "~2.4.0"
+    "nativescript-dev-typescript": "^0.7.1",
+    "tns-platform-declarations": "~4.0.0",
+    "typescript": "~2.7.2"
   }
 }
