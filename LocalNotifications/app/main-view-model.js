@@ -61,6 +61,7 @@ var DemoAppModel = (function (_super) {
       body: 'The big body. The big body. The big body. The big body. The big body. The big body. The big body. The big body.',
       bigTextStyle: true, // Adds an 'expansion arrow' to the notification (Android only)
       sound: "customsound",
+      channel: "My Awesome Channel",
       ticker: 'Special ticker text (Android only)',
       at: new Date(new Date().getTime() + (10*1000))
     }]).then(
@@ -167,7 +168,7 @@ var DemoAppModel = (function (_super) {
         function(ids) {
           dialogs.alert({
             title: "Scheduled ID's",
-            message: 'ID\'s: ' + ids, 
+            message: 'ID\'s: ' + ids,
             okButtonText: "Sweet!"
           });
         },
