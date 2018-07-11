@@ -1,5 +1,7 @@
 # nativescript-local-notifications demo app
 
+> DEPRECATED: we now use [the demo inside the plugin repo](https://github.com/EddyVerbruggen/nativescript-local-notifications/demo).
+
 Demo app for the {N} [local notifications plugin](https://www.npmjs.com/package/nativescript-local-notifications). SuperEasy(TM) to install!
 
 ## Installation
